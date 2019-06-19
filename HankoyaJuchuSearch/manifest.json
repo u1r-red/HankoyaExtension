@@ -1,18 +1,29 @@
 {
-  "name": "Hankoya Juchu Search",
-  "version": "0.1.0",
-  "manifest_version": 2,
-  "description": "context-menu to jump to Juchu-List from selected text",
-  "content_scripts": [{
-    "matches": ["https://amida.cybozu.com/*"],
-    "all_frames": true,
-    "js": ["jquery-3.4.1.min.js","juchu_popup.js"]
-  }],
-  "background": {
-     "scripts": ["juchu_popup_background.js"],
-     "persistent": true
-   },
-   "permissions": [
-       "contextMenus"
-   ]
+	"name": "Hankoya Juchu Search",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"description": "context-menu to jump to Juchu-List from selected text",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://amida.cybozu.com/*"
+			],
+			"all_frames": true,
+			"js": [
+				"jquery-3.4.1.min.js",
+				"juchu_popup.js"
+			]
+		}
+	],
+	"background": {
+		"scripts": [
+			"JuchuUrl.js",
+			"JuchuJumpMenu.js",
+			"juchu_popup_background.js"
+		],
+		"persistent": true
+	},
+	"permissions": [
+		"contextMenus"
+	]
 }
