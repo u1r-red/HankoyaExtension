@@ -5,7 +5,8 @@
   "description": "context-menu to jump to Juchu-List from selected text",
   "content_scripts": [{
     "matches": ["https://amida.cybozu.com/k/*"],
-    "js": ["juchu_popup.js"]
+    "all_frames": true,
+    "js": ["jquery-3.4.1.min.js","juchu_popup.js"]
   }],
   "background": {
      "scripts": ["juchu_popup_background.js"],
